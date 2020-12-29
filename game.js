@@ -52,8 +52,8 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     player.body.collideWorldBounds = true
   
     //  Our two animations, walking left and right.
-    player.animations.add('left', [0, 1], 10, true)
-    player.animations.add('right', [2, 3], 10, true)
+    player.animations.add('left', [3, 3], 10, true)
+    player.animations.add('right', [7, 7], 10, true)
   
     //  Finally some diamonds to collect
     diamonds = game.add.group()
@@ -85,7 +85,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     game.physics.arcade.collide(player, platforms)
     game.physics.arcade.collide(diamonds, platforms)
   
-    //  Call callectionDiamond() if player overlaps with a diamond
+    //  Call collectionDiamond() if player overlaps with a diamond
     game.physics.arcade.overlap(player, diamonds, collectDiamond, null, this)
   
     // Configure the controls!
