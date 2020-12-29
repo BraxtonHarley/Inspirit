@@ -52,8 +52,8 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     player.body.collideWorldBounds = true
   
     //  Our two animations, walking left and right.
-    player.animations.add('left', [3, 3], 10, true)
-    player.animations.add('right', [7, 7], 10, true)
+    player.animations.add('left', [3, 4], 10, true)
+    player.animations.add('right', [7, 8], 10, true)
   
     //  Finally some diamonds to collect
     diamonds = game.add.group()
@@ -107,7 +107,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 
     // Show an alert modal when score reaches 120
     if (score === 120) {
-      alert('Youre Alive!!')
+      alert('Congrats!! You gained enough essence to become human again!!')
       score = 0
     }
   }
