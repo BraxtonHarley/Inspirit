@@ -109,7 +109,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 
     // Show an alert modal when score reaches 120
     if (score === 120) {
-      alert('Congrats!! You gained enough essence to become human again!!')
+      alert('Congrats!! You gained enough essence to become human again!! Now how do you get out of this forest')
       score = 0
     }
   }
