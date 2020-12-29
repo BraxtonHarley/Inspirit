@@ -16,10 +16,10 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
   
   function preload () {
     // Load & Define our game assets
-    game.load.image('sky', './assets/sky.png')
+    game.load.image('sky', './assets/Background.png')
     game.load.image('ground', './assets/platform.png')
-    game.load.image('diamond', './assets/diamond.png')
-    game.load.spritesheet('woof', './assets/woof.png', 32, 32)
+    game.load.image('diamond', './assets/item2.png')
+    game.load.spritesheet('woof', './assets/character2.png', 32, 32)
   }
   
   function create () {
@@ -28,14 +28,10 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     game.add.sprite(0, 0, 'sky')
   
     platforms = game.add.group()
-  
     platforms.enableBody = true
 
     const ground = platforms.create(0, game.world.height - 64, 'ground')
-  
     ground.scale.setTo(2, 2)
-  
-    
     ground.body.immovable = true
   
     let ledge = platforms.create(400, 450, 'ground')
@@ -110,7 +106,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     }
     // Show an alert modal when score reaches 120
     if (score === 120) {
-      alert('You win!')
+      alert('Youre Alive!!')
       score = 0
     }
   }
