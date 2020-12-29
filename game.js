@@ -13,6 +13,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
   let diamonds
   let cursors
   let player
+  let audio
   
   function preload () {
     // Load & Define our game assets
@@ -20,6 +21,7 @@ const game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
     game.load.image('ground', './assets/platform.png')
     game.load.image('diamond', './assets/item2.png')
     game.load.spritesheet('woof', './assets/character2.png', 32, 32)
+    game.load.audio('audio', './assets/audio.mp3');
   }
   
   function create () {

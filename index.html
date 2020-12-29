@@ -3,13 +3,17 @@
     <head>
         <meta charset="utf-8">
 
+        <link src="/style.css" type="stylesheet">
+
         <title>My Game</title>
         <script type="text/javascript" src="/phaser.min.js"></script>
     </head>
     <body>
-        <audio autoplay>
-            <source src="./assets/audio.mp3" type="audio/mp3">  
+
+        <audio id="player" controls autoplay loop>
+            <source src="./assets/audio.mp3" type="audio/mp3">
         </audio>
+        
         <script type="text/javascript" src="/game.js"></script>
     </body>
 </html>
